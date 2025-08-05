@@ -1,0 +1,939 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <link rel="icon" type="image/png" href="logo.png" />
+
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description"
+        content="Asim's Personal Assistant offers trusted document handling, site visits, and personal errands across Mumbai — specially tailored for NRIs and business clients." />
+    <meta name="theme-color" content="#000000" />
+
+    <!-- Open Graph Meta Tags -->
+    <meta property="og:title" content="Asim's Personal Assistant in Mumbai" />
+    <meta property="og:description"
+        content="Your trusted local partner in Mumbai for document handling, site visits, and errands — built for NRIs, expats, and busy professionals." />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://asimassist.in/" />
+    <meta property="og:image" content="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" />
+
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Asim's Personal Assistant in Mumbai" />
+    <meta name="twitter:description"
+        content="Your trusted partner in Mumbai for errands, document work, and more — with full transparency & professionalism." />
+    <meta name="twitter:image" content="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" />
+
+    <title>Asim's Personal Assistant | Mumbai Errands & Document Help</title>
+    <link rel="canonical" href="https://asimassist.in/" />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet" />
+
+    <!-- Styles below (unchanged but organized for performance) -->
+    <style>
+        :root {
+            --bg-color: #0d0d0d;
+            --neon-blue: #00eaff;
+            --neon-green: #39FF14;
+            --text-color: #ffffff;
+            --card-bg: #1a1a1a;
+            --hover-glow: 0 0 10px var(--neon-blue), 0 0 20px var(--neon-blue);
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: var(--bg-color);
+            color: var(--text-color);
+            line-height: 1.6;
+            overflow-x: hidden;
+        }
+
+        .container {
+            max-width: 1100px;
+            margin: 0 auto;
+            padding: 1px 10px;
+        }
+
+        header {
+            background-color: transparent;
+            padding: 0.2vh 0;
+            /* Thinner header */
+            box-shadow: 0 0 15px rgba(0, 255, 224, 0.2);
+        }
+
+        .nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 10px;
+        }
+
+        header h1 {
+            font-size: 2rem;
+            color: var(--neon-blue);
+            word-break: break-word;
+            flex: 1;
+        }
+
+        .cta-btn {
+            background-color: transparent;
+            border: 2px solid var(--neon-blue);
+            padding: 12px 20px;
+            color: var(--text-color);
+            text-decoration: none;
+            border-radius: 10px;
+            transition: all 0.4s ease;
+            min-height: 44px;
+            width: auto;
+            flex-shrink: 0;
+        }
+
+        .cta-btn:hover {
+            background-color: var(--neon-blue);
+            color: #000;
+            box-shadow: var(--hover-glow);
+        }
+
+        .hero {
+            text-align: center;
+            padding: 80px 20px;
+            height: 90vh;
+            /* width: auto; */
+            background-image: url(image.webp);
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+        }
+
+        .hero-video {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            z-index: 0;
+            opacity: 0.25;
+            /* Adjust if needed */
+            pointer-events: none;
+        }
+
+        .hero .container {
+            position: relative;
+            z-index: 2;
+        }
+
+
+        .About_service {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+
+
+
+        .hero h2 {
+            font-size: 2.5rem;
+            margin-bottom: 20px;
+        }
+
+        .gradient-text {
+            /* background: linear-gradient(90deg, #00f5a0, #00d9f5, #a178ff, #ff61d2, #fe9090); */
+            background: linear-gradient(90deg, #00fff7, #00c3ff, #a178ff, #ff7f50, #ffcc70);
+            background-size: 300% 300%;
+            background-clip: text;
+            -webkit-background-clip: text;
+            color: transparent;
+            -webkit-text-fill-color: transparent;
+            animation: gradientMove 5s ease infinite;
+            font-weight: 700;
+        }
+
+        @keyframes gradientMove {
+            0% {
+                background-position: 0% 50%;
+            }
+
+            50% {
+                background-position: 100% 50%;
+            }
+
+            100% {
+                background-position: 0% 50%;
+            }
+        }
+
+        .hero p {
+            font-size: 1rem;
+            margin-top: 10px;
+            max-width: 90%;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .hero-btn {
+            display: inline-block;
+            margin-top: 30px;
+            padding: 14px 28px;
+            background-color: transparent;
+            border: 2px solid var(--neon-blue);
+            color: var(--neon-blue);
+            text-decoration: none;
+            border-radius: 12px;
+            font-weight: 700;
+            transition: all 0.4s ease;
+            min-height: 44px;
+            width: auto;
+            text-align: center;
+        }
+
+        .hero-btn:hover {
+            background-color: var(--neon-blue);
+            color: #000;
+            box-shadow: var(--hover-glow);
+        }
+
+        .neon-box {
+            border: 2px dashed #00eaff;
+            border-radius: 15px;
+            padding: 20px;
+            margin-top: 20px;
+            background-color: rgba(0, 234, 255, 0.05);
+            box-shadow: 0 0 15px #00eaff88, 0 0 30px #00eaff44;
+            color: #ffffff;
+            font-weight: 500;
+            animation: glowBox 3s ease-in-out infinite alternate;
+        }
+
+        @keyframes glowBox {
+            from {
+                box-shadow: 0 0 10px #00eaff33, 0 0 20px #00eaff22;
+            }
+
+            to {
+                box-shadow: 0 0 20px #00eaffaa, 0 0 40px #00eaff55;
+            }
+        }
+
+
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 25px;
+            margin-top: 30px;
+        }
+
+        .unique {
+            padding: 60px 20px;
+            background: #0d0d0d;
+            /* dark background */
+            color: #fff;
+            text-align: center;
+        }
+
+        .unique .section-title {
+            font-size: 2.5rem;
+            margin-bottom: 40px;
+            font-weight: 700;
+            background: linear-gradient(90deg, #00f5a0, #00d9f5, #a178ff, #ff61d2, #fe9090);
+            background-clip: text;
+            -webkit-background-clip: text;
+            color: transparent;
+            -webkit-text-fill-color: transparent;
+            animation: gradientMove 5s ease infinite;
+        }
+
+        .unique-features {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 30px;
+        }
+
+        .feature-card {
+            background: #1a1a1a;
+            padding: 30px;
+            border-radius: 16px;
+            width: 280px;
+            box-shadow: 0 0 12px rgba(0, 255, 200, 0.1);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .feature-card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 0 20px rgba(0, 255, 200, 0.3);
+        }
+
+        .feature-card i {
+            font-size: 2.5rem;
+            margin-bottom: 15px;
+            color: #00f5a0;
+        }
+
+        .feature-card h3 {
+            font-size: 1.3rem;
+            margin-bottom: 10px;
+            color: #fff;
+        }
+
+        .feature-card p {
+            font-size: 0.95rem;
+            color: #ccc;
+            line-height: 1.5;
+        }
+
+
+        .card {
+            background-color: var(--card-bg);
+            padding: 24px;
+            border-radius: 15px;
+            border: 1px solid rgba(255, 255, 255, 0.05);
+            transition: all 0.3s ease;
+            cursor: pointer;
+        }
+
+        .card:hover {
+            transform: translateY(-8px) scale(1.01);
+            box-shadow: var(--hover-glow);
+        }
+
+        .card h4 {
+            font-size: 1.2rem;
+            color: var(--neon-blue);
+            margin-bottom: 10px;
+        }
+
+        .contact a {
+            color: var(--neon-blue);
+            text-decoration: none;
+            font-weight: 600;
+            display: inline-block;
+            margin-bottom: 10px;
+        }
+
+        .contact a:hover {
+            text-shadow: var(--hover-glow);
+        }
+
+        footer {
+            background: #000;
+            text-align: center;
+            padding: 20px;
+            color: #888;
+            font-size: 0.9rem;
+            border-top: 1px solid #222;
+        }
+
+        .whatsapp {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            z-index: 1000;
+            transition: 0.3s ease;
+        }
+
+        .whatsapp img {
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            box-shadow: 0 0 10px #25d366;
+        }
+
+        .whatsapp:hover {
+            transform: scale(1.1);
+        }
+
+        .upload-box {
+            text-align: center;
+            border: 2px dashed #00ff88;
+            padding: 60px 20px;
+            border-radius: 15px;
+            background-color: rgba(0, 238, 255, 0.05);
+            margin-top: 60px;
+            box-shadow: 0 0 20px rgba(57, 255, 20, 0.1);
+        }
+
+        .upload-options {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 30px;
+            margin-top: 40px;
+        }
+
+        .upload-card {
+            background-color: var(--card-bg);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            padding: 30px 20px;
+            border-radius: 15px;
+            width: 280px;
+            box-shadow: 0 0 15px rgba(0, 255, 224, 0.05);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: space-between;
+            min-height: 250px;
+        }
+
+        .upload-card h4 {
+            color: var(--neon-blue);
+            margin-bottom: 10px;
+        }
+
+        .copy-wrap {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            flex-wrap: wrap;
+            margin-bottom: 12px;
+        }
+
+        .copy-btn {
+            font-size: 12px;
+            padding: 4px 10px;
+            background: transparent;
+            border: 1.5px dashed var(--neon-green);
+            color: var(--neon-green);
+            border-radius: 8px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+
+        .copy-btn:hover {
+            background-color: rgba(57, 255, 20, 0.1);
+            box-shadow: 0 0 10px rgba(57, 255, 20, 0.3);
+        }
+
+        .copy-status {
+            color: var(--neon-green);
+            font-size: 12px;
+            font-weight: 500;
+            opacity: 0;
+            transition: opacity 0.3s ease;
+        }
+
+        .copy-status.active {
+            opacity: 1;
+        }
+
+
+        /* Center the testimonials section cards */
+
+        .testimonials {
+            text-align: center;
+        }
+
+        .testimonials .grid {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 25px;
+            margin-top: 30px;
+        }
+
+        .testimonials .card {
+            text-align: left;
+            max-width: 320px;
+        }
+
+        .gradient-feedback {
+            font-size: 1.2rem;
+            font-weight: 600;
+            background: linear-gradient(90deg, #00f5a0, #00d9f5, #a178ff, #ff61d2, #fe9090);
+            background-size: 300% 300%;
+            background-clip: text;
+            -webkit-background-clip: text;
+            color: transparent;
+            -webkit-text-fill-color: transparent;
+            animation: gradientFlow 6s ease infinite;
+            line-height: 1.6;
+        }
+
+        @keyframes gradientFlow {
+            0% {
+                background-position: 0% 50%;
+            }
+
+            50% {
+                background-position: 100% 50%;
+            }
+
+            100% {
+                background-position: 0% 50%;
+            }
+        }
+
+
+        @media (max-width: 768px) {
+
+            .hero h2 {
+                font-size: 2rem;
+            }
+
+            .cta-btn,
+            .hero-btn {
+                width: fit-content;
+                max-width: 100%;
+                padding: 12px 20px;
+                margin: 0 auto;
+            }
+
+            .hero-btn {
+                margin-top: 50px;
+                /* 🔧 This moves button lower in mobile view */
+            }
+
+            .banner-section {
+                height: 400px;
+            }
+
+            .upload-options {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .hero {
+                padding: 40px 10px;
+                background-size: cover;
+                /* makes it fill mobile screens better */
+                height: 300px;
+            }
+
+
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .statements {
+            position: relative;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            margin-top: 1em;
+
+        }
+
+        .statement1 {
+            font-size: 2.6rem;
+            font-weight: 800;
+            font-family: 'Poppins', 'Segoe UI', sans-serif;
+            background: linear-gradient(90deg, #00f5a0, #00d9f5, #a178ff, #ff61d2, #fe9090);
+            background-size: 200% 200%;
+            background-clip: text;
+            -webkit-background-clip: text;
+            color: transparent;
+            -webkit-text-fill-color: transparent;
+            animation: neonGradient 4s ease infinite;
+            text-align: center;
+            display: inline-block;
+        }
+
+        @keyframes neonGradient {
+            0% {
+                background-position: 0% 50%;
+            }
+
+            50% {
+                background-position: 100% 50%;
+            }
+
+            100% {
+                background-position: 0% 50%;
+            }
+        }
+
+        .statement2 {
+            font-size: 1.5rem;
+            font-weight: 600;
+            color: #caffff;
+            font-family: 'Poppins', 'Segoe UI', sans-serif;
+            text-align: center;
+            letter-spacing: 0.3px;
+            line-height: 1.5;
+            margin: 8px 0;
+            text-shadow: 0 0 5px rgba(0, 255, 255, 0.4);
+            animation: fadeInUp 1.2s ease forwards;
+        }
+
+        /* Optional smooth fade-up animation */
+        @keyframes fadeInUp {
+            0% {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+
+            100% {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+
+        .statement3 {
+            font-size: 1.2rem;
+            font-weight: 700;
+            color: #a8ffb0;
+            /* pastel green */
+            font-family: 'Poppins', 'Segoe UI', sans-serif;
+            text-align: center;
+            letter-spacing: 0.5px;
+            text-shadow: 0 0 5px rgba(168, 255, 176, 0.3);
+            margin: 6px 0;
+        }
+
+        @media (max-width: 768px) {
+            .statement1 {
+                font-size: 1.5rem;
+            }
+
+            .statement2 {
+                font-size: 1rem;
+            }
+        }
+    </style>
+
+</head>
+
+<body>
+
+    <header>
+        <div class="container nav"
+            style="display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; padding: 10px;">
+
+            <!-- Left side: Logo + Title in one line -->
+            <div style="display: flex; align-items: center; gap: 10px;">
+                <img src="logo.jpg" alt="Asim Assistant Logo" style="height: 60px; width: auto;" />
+                <h1 style="margin: 0; font-size: 20px;">Asim<span>'s</span> Assistant</h1>
+            </div>
+
+            <!-- Right side: Contact Button -->
+            <a href="#contact" class="cta-btn" aria-label="Contact Asim"
+                style="padding: 6px 12px; font-size: 14px; text-decoration: none;">
+                Contact Now
+            </a>
+
+        </div>
+    </header>
+
+    <main>
+        <section class="hero" id="hero-section">
+            <div class="container">
+                <!-- <h2><span class="gradient-text">Your trusted executor in Mumbai — from documents to deadlines.</span>
+                </h2>
+                <p>You Plan It From Abroad, I'll Execute it in Mumbai</p>
+                <p><span style="color: green; font-weight: 550;">Your Trusted Local Partner in Mumbai</span></p>
+                <a href="#services" class="hero-btn" aria-label="Explore Services">Explore Services</a> -->
+            </div>
+        </section>
+
+        <section class="statements">
+            <h2> <span class="statement1">Your trusted executor in Mumbai — from documents to deadlines.</span></h2><br>
+            <p class="statement2">You Plan It From Abroad, I'll Execute it in Mumbai</p>
+            <p><span class="statement3">Your Trusted Local Partner in Mumbai</span></p>
+            <!-- <a href="#services"  aria-label="Explore Services" >Explore Services</a> -->
+        </section>
+
+        <br><br>
+
+        <section class="about" id="about">
+            <div class="container">
+                <h2 class="About_service">About the Service</h2>
+
+                <div class="neon-box">
+                    <p>From urgent business follow-ups, document work, site visits, to personal errands — I act on your
+                        behalf in Mumbai with complete professionalism, honesty, and respect. Save your time, cost &
+                        stress. Just explain it once — I’ll handle the rest.</p>
+                </div>
+
+            </div>
+        </section>
+
+
+        <section class="unique" id="why-me">
+            <div class="container">
+                <h2 class="section-title">Why Choose Asim Assist Mumbai?</h2>
+                <p style="font-weight: 500; margin-top: 10px;">
+                    Because you deserve a trusted local partner who gets things done.
+                </p>
+                <p style="margin-bottom: 25px;">
+                    We’re not just another errand service — we’re your personal business assistant in Mumbai, offering
+                    you:
+                </p>
+
+                <div class="unique-features">
+                    <div class="feature-card">
+                        <i class="fas fa-clock"></i>
+                        <h3>✅ Time-Saving Solutions</h3>
+                        <p>Whether you're abroad or in another city, you don’t need to fly down or chase people. We
+                            handle tasks on your behalf — fast and reliably.</p>
+                    </div>
+
+                    <div class="feature-card">
+                        <i class="fas fa-hands-helping"></i>
+                        <h3>✅ On-Ground Support</h3>
+                        <p>From business errands, document handling, property visits, purchases, or local inspections.
+                        </p>
+                    </div>
+
+                    <div class="feature-card">
+                        <i class="fas fa-shield-alt"></i>
+                        <h3>✅ Trust & Transparency</h3>
+                        <p>You get live updates, photos, videos, receipts — so you're always in control, even from miles
+                            away.</p>
+                    </div>
+
+                    <div class="feature-card">
+                        <i class="fas fa-rupee-sign"></i>
+                        <h3>✅ Affordable & Reliable</h3>
+                        <p>No hidden charges. Clear communication. Pay for only what you need.</p>
+                    </div>
+                </div>
+
+                <p style="margin-top: 25px; font-weight: 500;">
+                    Because I treat every task with ownership, honesty, and attention to detail. I’m not a random
+                    delivery guy — I’m your assistant, working as if you were here in person.
+                </p>
+            </div>
+        </section>
+
+        <section class="upload" id="upload">
+            <div class="container upload-box">
+                <h2>Need to Share Documents?</h2>
+                <p>Choose your preferred method to send your JPG, PNG, or PDF files.</p>
+
+                <div class="upload-options">
+                    <div class="upload-card">
+                        <h3>📲 Send on WhatsApp</h3>
+                        <p>Fast & secure. Send documents directly via WhatsApp chat.</p>
+                        <a class="hero-btn"
+                            href="https://wa.me/917666346786?text=Hello%20Asim,%20I%20have%20documents%20to%20share."
+                            target="_blank" rel="noopener" aria-label="Send documents via WhatsApp">
+                            Send via WhatsApp
+                        </a>
+
+
+                    </div>
+
+                    <div class="upload-card">
+                        <h3>📧 Send via Email</h3>
+                        <p>Prefer email? Attach files and send them to my inbox.</p>
+                        <a class="hero-btn" href="#" onclick="handleEmailClick(event)"
+                            aria-label="Send documents via Email">Send via Email</a>
+
+                    </div>
+                </div>
+
+                <p class="subtext" style="margin-top: 20px; color: #a8ffdb; font-weight: 500;">Your privacy is our
+                    priority
+                    — every file is handled with complete confidentiality. </p>
+            </div>
+        </section>
+        <br>
+
+        <section class="contact" id="contact">
+            <div class="container">
+                <h2>Contact</h2>
+                <p style="color: #b0f2c2; font-weight: 500;">Always feel free to Call, WhatsApp or Email to request
+                    services.</p>
+                <div class="copy-wrap">
+                    <a href="tel:+917666346786" aria-label="Call Asim on phone">📞 +91 7666346786</a>
+                    <button class="copy-btn" onclick="copyToClipboard('+917666346786', 'phone-status')">Copy</button>
+                    <span class="copy-status" id="phone-status">Phone Copied ✅</span>
+                </div>
+
+                <div class="copy-wrap">
+                    <a href="mailto:asimassistmumbai@gmail.com" aria-label="Email Asim">📧
+                        asimassistmumbai@gmail.com</a>
+                    <button class="copy-btn"
+                        onclick="copyToClipboard('asimassistmumbai@gmail.com', 'email-status')">Copy</button>
+                    <span class="copy-status" id="email-status">Email Copied ✅</span>
+                </div>
+
+            </div>
+        </section>
+
+
+        <section class="trust-message">
+            <div class="container" style="margin-top: 40px; text-align: center; padding: 20px;">
+                <p style="font-size: 1.1rem; line-height: 1.7; color: #a8ffdb; font-weight: 500;">
+                    We offer <strong>genuine, trustworthy services</strong> to anyone around the world who needs
+                    reliable support in Mumbai (India).
+                    We’ve built a <strong>clean, transparent system</strong> that earns our clients’ trust.<br><br>
+                    Your documents are shared <strong>directly with us</strong>—no agents, no middlemen—ensuring 100%
+                    security and privacy.<br><br>
+                    Once you connect and share your needs, we’ll estimate the <strong>most affordable solution
+                        possible</strong>.
+                    All details, including <strong>payment options and service tracking</strong>, are shared personally
+                    with you via your WhatsApp or email.<br><br>
+                    <strong>There’s no one in between. Just you and me.</strong><br>
+                    Simple, honest, and secure—that’s how we work.
+                </p>
+            </div>
+        </section>
+
+        <section class="services" id="services">
+            <div class="container">
+                <h2>Services Offered</h2>
+                <div class="grid">
+                    <article class="card">
+                        <h3>🤝 Personal Errands</h3>
+                        <p>Your everyday tasks, handled with care — as if you were here.</p>
+                    </article>
+                    <article class="card">
+                        <h3>🏢 Site Visits</h3>
+                        <p>Visual reports and in-person verification with photos and summaries.</p>
+                    </article>
+                    <article class="card">
+                        <h3>📦 Local Deliveries</h3>
+                        <p>Coordinating local deliveries & purchases with reliability.</p>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <br><br><br>
+
+        <section class="faq container" id="faq">
+            <h2>Frequently Asked Questions</h2><br>
+
+            <div class="card">
+                <h3>What kind of work do you handle?</h3>
+                <p>I help with document work, site visits, errands, and more — anything legal and professional in
+                    Mumbai.</p>
+            </div><br>
+
+            <div class="card">
+                <h3>How do I know the job is done?</h3>
+                <p>I provide timely updates, photos, summaries, and complete transparency during every task.</p>
+            </div><br>
+
+            <div class="card">
+                <h3>Is my data and information safe?</h3>
+                <p>Yes. Confidentiality is a top priority. Your documents and details are never shared or misused.</p>
+            </div><br>
+
+            <div class="card">
+                <h3>Do you provide pricing upfront?</h3>
+                <p>Always. I explain the task, timeline, and cost before starting. No hidden charges.</p>
+            </div>
+        </section>
+    </main>
+
+    <br><br><br>
+
+    <!-- Testimonial sections -->
+
+    <section class="testimonials" id="testimonials">
+        <div class="container">
+            <h2>Trusted by Clients Worldwide</h2>
+            <div class="grid">
+                <div class="card">
+                    <h4>🇦🇪 Dubai, UAE</h4>
+                    <p>“I needed urgent legal documents followed up in Mumbai. Asim handled everything smoothly — with
+                        full transparency and timely updates. Highly recommended!”</p>
+                    <p style="color: #00eaff; font-weight: 600;">— Zainab M., Dubai</p>
+                </div>
+
+                <div class="card">
+                    <h4>🇨🇦 Toronto, Canada</h4>
+                    <p>“Coordinating from Canada felt effortless thanks to Asim. From property visits to courier help,
+                        everything was done like I was there myself.”</p>
+                    <p style="color: #00eaff; font-weight: 600;">— Rahul P., Toronto</p>
+                </div>
+
+                <div class="card">
+                    <h4>🇸🇬 Singapore</h4>
+                    <p>“Asim kept me updated at every step — I got photos, call summaries, and completed reports.
+                        Trustworthy and professional to the core.”</p>
+                    <p style="color: #00eaff; font-weight: 600;">— Ananya R., Singapore</p>
+                </div>
+
+                <div class="card">
+                    <h4>🇬🇧 London, UK</h4>
+                    <p>“Very helpful for NRIs. Saved me time, effort, and travel costs. Honest and super responsive.”
+                    </p>
+                    <p style="color: #00eaff; font-weight: 600;">— Vikram S., London</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="feedback-invite">
+        <div class="container" style="text-align: center; margin-top: 40px;">
+            <p class="gradient-feedback">
+                We’d love to hear your feedback! If you're happy with our work, please share your thoughts with us via
+                <a href="https://wa.me/917666346786" style="text-decoration: underline;">WhatsApp</a> or
+                <a href="mailto:asimassistmumbai@gmail.com" style="text-decoration: underline;">email</a>.
+            </p>
+        </div>
+    </section>
+
+
+    <footer>
+        <div class="container">
+            <p style="color: #00eaff; font-weight: 500;">&copy; <span id="year"></span> Asim's Personal Assistant. All
+                rights reserved.</p>
+        </div>
+    </footer>
+
+    <a class="whatsapp" href="https://wa.me/917666346786" target="_blank" title="Chat on WhatsApp" rel="noopener">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="Chat with Asim on WhatsApp" />
+    </a>
+
+    <script>
+        document.getElementById("year").textContent = new Date().getFullYear();
+
+        function copyToClipboard(text, statusId) {
+            navigator.clipboard.writeText(text).then(() => {
+                const status = document.getElementById(statusId);
+                status.classList.add('active');
+                setTimeout(() => {
+                    status.classList.remove('active');
+                }, 2500);
+            });
+        }
+
+        function handleEmailClick(e) {
+            e.preventDefault();
+
+            const email = "asimassistmumbai@gmail.com";
+            const subject = "Document Submission for Assistance";
+            const body = "";
+
+            // Check for mobile
+            const isMobile = /Android|iPhone|iPad|iPod/i.test(navigator.userAgent);
+
+            if (isMobile) {
+                // Use mail app on mobile
+                window.location.href = `mailto:${email}?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
+            } else {
+                // Open Gmail compose in browser on desktop
+                const gmailUrl = `https://mail.google.com/mail/?view=cm&fs=1&to=${email}&su=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
+                window.open(gmailUrl, '_blank');
+            }
+        }
+    </script>
+
+</body>
+
+</html>
